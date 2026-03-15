@@ -219,7 +219,7 @@ function WishWallSection() {
   const fetchWishes = async () => {
     try {
       // Pastikan API_URL di .env.local sudah benar
-      const response = await axios.get(`${API_URL}/wishes`);
+      const response = await axios.get(`${API_URL}/api/wishes`);
       if (response.data) setWishes(response.data);
     } catch (error) {
       console.error("Backend error:", error);
@@ -241,7 +241,7 @@ function WishWallSection() {
     if (!name || !message) return alert("Isi nama dan pesan dulu ya!");
 
     try {
-      await axios.post(`${API_URL}/wishes`, { name, message });
+      await axios.post(`${API_URL}/api/wishes`, { name, message });
       // Reset form via state
       setName("");
       setMessage("");
