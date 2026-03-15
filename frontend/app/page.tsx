@@ -305,5 +305,5 @@ function WishWallSection() {
         </div>
       </div>
     </section>
-  );
-}
+  );  
+}  
