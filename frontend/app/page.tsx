@@ -5,8 +5,10 @@ import { motion, useInView } from "framer-motion";
 import confetti from "canvas-confetti";
 import axios from "axios"; // Import axios
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://lilyypages-ramadhancard.hf.space";
+  
 // --- KOMPONEN UTAMA (Yang merender semua section) ---
 export default function Page() {
   return (
